@@ -1,0 +1,132 @@
+<!DOCTYPE>
+<html>
+<head>
+  <link rel="stylesheet"href="style/main.css">
+  <meta charset="utf-8">
+<script type="text/javascript">
+  function openbox(id,myTable) {
+    var div = document.getElementById(id);
+    var myTable_div = document.getElementById(myTable);
+    if(div.style.display == 'block') {
+        div.style.display = 'none';
+    }
+    else {
+        div.style.display = 'block';
+    }
+  }
+  </script>
+  <script>
+function myFunc (e)                              
+{
+var evt = window.event || e,                      
+    obj = evt.srcElement || evt.target;           
+if (obj.tagName == 'TABLE') return;                
+while (obj.tagName != 'TD') obj = obj.parentNode; 
+obj.className = obj.className ? '' : 'act';       
+}
+onload = function ()
+{
+var trg = document.getElementById ('myTBL');
+if (document.addEventListener) trg.addEventListener ('click', myFunc); 
+else if (document.attachEvent) trg.attachEvent ('onclick', myFunc);    
+else trg.onclick = myFunc;                                             
+}
+  </script>
+</head>
+<body>
+  <div id="Box">
+    <div id='myTable'><div class="close" onclick="openbox('Box')">x</div>
+        <table class="prety" id="myTBL"border="1">
+           <caption>Price Time</caption>
+              <tr>
+                <th></th>
+                <th>M1</th>
+                <th>M2</th>
+                <th>M3</th>
+                <th>M4</th>
+              </tr>
+              <tr>
+                <th>USD</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>EUR</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>RUS</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>CAD</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>BUN</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>GRE</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>JPN</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>UKR</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>AUS</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>FRA</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>ITL</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+        </table>
+    </div>
+  </div>
+<div class="button">
+  <button href="#" onclick="openbox('Box');return false;">Click open Price Time</button>
+</div>
+</body>
+</html>
